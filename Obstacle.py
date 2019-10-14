@@ -23,7 +23,7 @@ class Plant(pygame.sprite.Sprite):
 
     # 不停往左移动
     def move(self):
-        self.rect.left = self.rect.left - int(speed * speed_ratio)
+        self.rect.left = self.rect.left - int(speed * get_speed_ratio())
 
     # 把自己画到屏幕上去
     def draw(self, screen):

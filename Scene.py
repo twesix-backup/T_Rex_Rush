@@ -21,7 +21,7 @@ class Scene(pygame.sprite.Sprite):
 
     # 不停向左移动
     def move(self):
-        self.x = self.x - int(speed * speed_ratio)
+        self.x = self.x - int(speed * get_speed_ratio())
 
     # 把自己画到屏幕上去
     def draw(self, screen):

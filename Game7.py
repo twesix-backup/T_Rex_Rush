@@ -80,7 +80,7 @@ def main():
 
     # 产生障碍物事件
     GenPlantEvent = pygame.constants.USEREVENT + 0
-    pygame.time.set_timer(GenPlantEvent, 1500)
+    pygame.time.set_timer(GenPlantEvent, random.randint(300, 1000))
 
     # 游戏是否结束了
     running = True
@@ -128,6 +128,7 @@ def main():
             plant.move()
             if dinosaur.rect.left > plant.rect.right and not plant.added_score:
                 score += 1
+                set_speed_ratio(1 + (score // 5) * 0.1)
                 plant.added_score = True
             if plant.rect.right < 0:
                 plants.remove(plant)
@@ -140,7 +141,7 @@ def main():
                 die_sound.play()
                 running = False
 
-        score_text = font.render("Score: " + str(score), 1, (0, 0, 0))
+        score_text = font.render("Score: " + str(score) + ", Speed Ratio: " + str(get_speed_ratio()), 1, (0, 0, 0))
         screen.blit(score_text, [10, 10])
         pygame.display.flip()
         clock.tick(60)

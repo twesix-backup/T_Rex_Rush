@@ -40,7 +40,6 @@ class Dino(pygame.sprite.Sprite):
         self.dinosaur = self.dinosaur_stop
         self.rect = self.dinosaur.get_rect()
         self.rect.left, self.rect.top = self.initial_left, self.initial_top
-        print(self.rect)
 
     # 跳跃
     def jump(self, time_passed):

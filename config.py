@@ -15,3 +15,11 @@ dino_jump_acceleration = 5000
 speed_ratio = 1.0
 speed = 10
 
+
+def set_speed_ratio(new_ratio):
+    global speed_ratio
+    speed_ratio = new_ratio
+
+
+def get_speed_ratio():
+    return speed_ratio
