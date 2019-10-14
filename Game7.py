@@ -40,9 +40,9 @@ def show_gameover(screen):
                         restart_rect.bottom > mouse_pos[1] > restart_rect.top:
                     return True
 
-        key_pressed = pygame.key.get_pressed()
-        if key_pressed[pygame.K_SPACE]:
-            return True
+        # key_pressed = pygame.key.get_pressed()
+        # if key_pressed[pygame.K_SPACE]:
+        #     return True
 
 
 # 将Score转为生成障碍物的概率
@@ -144,7 +144,7 @@ def main():
         score_text = font.render("Score: " + str(score) + ", Speed Ratio: " + str(get_speed_ratio()), 1, (0, 0, 0))
         screen.blit(score_text, [10, 10])
         pygame.display.flip()
-        clock.tick(60)
+        clock.tick(300)
 
     return show_gameover(screen)
 

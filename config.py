@@ -13,7 +13,7 @@ dion_jump_initial_speed = 1200
 dino_jump_acceleration = 5000
 
 speed_ratio = 1.0
-speed = 10
+speed = 3
 
 
 def set_speed_ratio(new_ratio):
